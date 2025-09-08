@@ -33,7 +33,12 @@ export function GameMessage({ message }: { message: GameMessageType }) {
                   alt="baseball adventure pixel art image"
                   className="w-full h-full object-cover object-center"
                 />
-
+              )}
+              {!image && !imageLoading && (
+                <img
+                  className="w-full h-full object-cover object-center"
+                  src="/not_available.png"
+                  alt="Fallback image" />
               )}
             </picture>
           )
